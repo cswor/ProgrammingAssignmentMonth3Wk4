@@ -1,0 +1,51 @@
+Feature Selection 
+=================
+Calculations for the underlying data (input to this study) was calculated as follows:
+
+	The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+	Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+	Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+The features selected for this study were extracted from the 3-axial -XYZ mean and std data.
+
+tBodyAcc-mean()-XYZ
+tBodyAcc-std()-XYZ
+tGravityAcc-mean()-XYZ
+tGravityAcc-std()-XYZ
+tBodyAccJerk-mean()-XYZ
+tBodyAccJerk-std()-XYZ
+tBodyGyro-mean()-XYZ
+tBodyGyro-std()-XYZ
+tBodyGyroJerk-mean()-XYZ
+tBodyGyroJerk-std()-XYZ
+fBodyAcc-mean()-XYZ
+fBodyAcc-std()-XYZ
+fBodyAccJerk-mean()-XYZ
+fBodyAccJerk-std()-XYZ
+fBodyGyro-mean()-XYZ
+fBodyGyro-std()-XYZ
+
+
+Additional vectors were obtained by calculating summariziing means for the mean and standard deviations for each subject and activity. This results in a mean of means or a mean of std for each subject/activity group.
+
+subject
+activity
+mean_of(tBodyAcc-mean()-XYZ)
+mean_of(tBodyAcc-std()-XYZ)
+mean_of(tGravityAcc-mean()-XYZ)
+mean_of(tGravityAcc-std()-XYZ)
+mean_of(tBodyAccJerk-mean()-XYZ)
+mean_of(tBodyAccJerk-std()-XYZ)
+mean_of(tBodyGyro-mean()-XYZ)
+mean_of(tBodyGyro-std()-XYZ)
+mean_of(tBodyGyroJerk-mean()-XYZ)
+mean_of(tBodyGyroJerk-std()-XYZ)
+mean_of(fBodyAcc-mean()-XYZ)
+mean_of(fBodyAcc-std()-XYZ)
+mean_of(fBodyAccJerk-mean()-XYZ)
+mean_of(fBodyAccJerk-std()-XYZ)
+mean_of(fBodyGyro-mean()-XYZ)
+mean_of(fBodyGyro-std()-XYZ)
+
