@@ -32,9 +32,9 @@ This dataset includes the following files:
 
 - 'README.txt'
 
-- 'tidy_mstr_df': Extracted from the original study by associating Subject ID and Activity Name with observations from the original study. Training and Test data are merged to one dataset, and meaningful names applied to the resultant data.
+- 'tidy_mstr_df.csv': Extracted from the original study by associating Subject ID and Activity Name with observations from the original study. Training and Test data are merged to one dataset, and meaningful names applied to the resultant data.
 
-- 'tidy_mstr_means': Calculated from tidy_mstr_df. A name is applied to each column to indicate what the data represents.
+- 'tidy_mstr_means.csv': Calculated from tidy_mstr_df. A name is applied to each column to indicate what the data represents.
 
 - 'run_analsysis.R': This script reads in data from the original study (see above link) and applies Subject ID and Activity Name to each observations in the original data and calculates the Mean of(means/std vars) for each subject and activity. Details of which features were selected for inclusion is provided in this script. By modifying the regular expression, more or less features could be included for analysis.
 

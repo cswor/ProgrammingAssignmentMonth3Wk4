@@ -1,12 +1,12 @@
 library(readr)
 library(dplyr)
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(url, "./HAR.zip", mode="wb")
+download.file(url, "./HAR.zip", mode = "wb")
 
 # !!!! unzip the .zip file instead of using the pre-unzipped files
-zipF<- "HAR.zip"
-outDir<-getwd()
-unzip(zipF,exdir=outDir)
+zipF <- "HAR.zip"
+outDir <- getwd()
+unzip(zipF,exdir = outDir)
 
 ##### Create the tidy master data from which means will be calculated
 ##### It will be a merged dataset with training and test data (from the original study)
@@ -63,8 +63,8 @@ unzip(zipF,exdir=outDir)
     tidy_mstr_df$activity <- factor(tidy_mstr_df$activity, levels = c(1,2,3,4,5,6),
                                    labels = c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
 
-# can use .csv for validating
-#write.csv(tidy_mstr_df, file = "tidy_mstr_df")
+    # can use .csv for validating
+    write.csv(tidy_mstr_df, file = "tidy_mstr_df.csv")
 
 ##### Calculate means by subject/activity and produce tidy output
     tidy_mstr_means <- tidy_mstr_df %>% group_by(subject,activity) %>% summarise_all("mean")
@@ -77,4 +77,4 @@ unzip(zipF,exdir=outDir)
     names(tidy_mstr_means) <- new_names2
     View(tidy_mstr_means)
 
-    #write.csv(tidy_mstr_means, file = "tidy_mstr_means")
+    write.csv(tidy_mstr_means, file = "tidy_mstr_means.csv")
