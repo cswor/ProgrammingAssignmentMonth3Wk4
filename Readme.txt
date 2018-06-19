@@ -38,7 +38,7 @@ This dataset includes the following files:
 
 - 'tidy_mstr_means.csv': Calculated from tidy_mstr_df. A name is applied to each column to indicate what the data represents.
 
-- 'run_analsysis.R': This script reads in data from the original study (see above link) and applies Subject ID and Activity Name to each observations in the original data and calculates the Mean of(means/std vars) for each subject and activity. Details of which features were selected for inclusion is provided in this script. By modifying the regular expression, more or less features could be included for analysis.
+- 'run_analsysis.R': This script reads in data from the original study (see above link) and applies Subject ID and Activity Name to each observations in the original data and calculates the Mean of(means/std vars) for each subject and activity. Details of which features were selected for inclusion is provided in this script. By modifying the regular expression, more or less features could be included for analysis. Script will download/unzip the data. It then reads the data and creates a new extract with proper names, selected columns, and adds subject id and activity names. It then summarizes("means") by subject and activity. The result is written to the working directory.
 
 Notes: 
 ======

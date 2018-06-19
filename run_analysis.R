@@ -13,7 +13,7 @@ unzip(zipF,exdir = outDir)
 ##### Subject and activity data will be added and appropriate column titles
 
     # Read data used for training
-    train_loc = "C:/Users/carl/Dropbox/Coursera/JH_DSS/UCI HAR Dataset/train/"
+    train_loc <- paste(outDir, "/UCI HAR Dataset/train/", sep = "")
     xtrain_loc <- paste0(train_loc,"X_train.txt")
     ytrain_loc <- paste0(train_loc,"y_train.txt")
     sub_train_loc <- paste0(train_loc,"subject_train.txt")
@@ -23,7 +23,7 @@ unzip(zipF,exdir = outDir)
     subject_train <- read.table(sub_train_loc, stringsAsFactors = FALSE)
 
     # Read data used for testing
-    test_loc = "C:/Users/carl/Dropbox/Coursera/JH_DSS/UCI HAR Dataset/test/"
+    test_loc = paste(outDir, "/UCI HAR Dataset/test/", sep = "")
     xtest_loc <- paste0(test_loc, "/X_test.txt")
     activity_test_loc <- paste0(test_loc, "/y_test.txt")
     sub_test_loc <- paste0(test_loc,"subject_test.txt")
@@ -34,7 +34,8 @@ unzip(zipF,exdir = outDir)
 
 
     # read new column titles from the features.txt
-    newCols <- read.table("C:/Users/carl/Dropbox/Coursera/JH_DSS/UCI HAR Dataset/features.txt")
+    fileLoc <- paste(outDir,"/UCI HAR Dataset/features.txt", sep = "" )
+    newCols <- read.table(fileLoc)
     #View(newCols)
 
     # add subject/activity data to train/test observations
@@ -64,7 +65,7 @@ unzip(zipF,exdir = outDir)
                                    labels = c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
 
     # can use .csv for validating
-    write.csv(tidy_mstr_df, file = "tidy_mstr_df.csv")
+#    write.csv(tidy_mstr_df, file = "tidy_mstr_df.csv)
 
 ##### Calculate means by subject/activity and produce tidy output
     tidy_mstr_means <- tidy_mstr_df %>% group_by(subject,activity) %>% summarise_all("mean")
@@ -77,4 +78,8 @@ unzip(zipF,exdir = outDir)
     names(tidy_mstr_means) <- new_names2
     View(tidy_mstr_means)
 
-    write.csv(tidy_mstr_means, file = "tidy_mstr_means.csv")
+#    outLocMeansCsv <- paste(getwd(), "/tidy_mstr_means.csv", sep = "")
+#    write.csv(tidy_mstr_means, file = outLocMeansCsv)
+
+    outLocMeansTxt <- paste(getwd(), "/tidy_mstr_means.txt", sep = "")
+    write.table(tidy_mstr_means, file = outLocMeansTxt, row.names = FALSE)
