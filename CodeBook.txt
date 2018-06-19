@@ -8,6 +8,8 @@ Calculations for the underlying data (input to this study) was calculated as fol
 
 	Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
+	Additional details for the underlying data is provided in Readme.txt
+
 The features selected for this study were extracted from the 3-axial -XYZ mean and std data. Extracted data appear in tidy_mstr_df.csv.
 
 tBodyAcc-mean()-XYZ
