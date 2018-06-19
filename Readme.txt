@@ -1,5 +1,5 @@
 ==================================================================
-Original source data was provided by:
+Underlying data was provided by:
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ==================================================================
@@ -16,7 +16,7 @@ The original experiments were carried out by the above researchers with a group 
 
 Data from the original experiment can be found at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. This data was used as the basis for this study.
 
-For each subject and activity, the following is provided
+Underlying data provided an extract that was the basis for this study. For each subject and activity, the following is provided
 ======================================
 
 - Subject ID
@@ -30,7 +30,9 @@ For each subject and activity, the following is provided
 This dataset includes the following files:
 =========================================
 
-- 'README.txt'
+- 'Codebook.txt'
+
+- 'Readme.txt'
 
 - 'tidy_mstr_df.csv': Extracted from the original study by associating Subject ID and Activity Name with observations from the original study. Training and Test data are merged to one dataset, and meaningful names applied to the resultant data.
 
